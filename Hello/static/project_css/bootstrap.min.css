@@ -1,0 +1,12 @@
+
+
+.col-md-4 wp2 item animated fadeInUp .col-md-4 wp2 item delay-05s animated fadeInUp .col-md-4 wp2 item delay-1s animated fadeInUp {
+    width: 50%;
+    float: left;
+    padding: 20px;
+    border: 2px solid red;
+}
+
+.col-md-12{
+position:relative;
+}
