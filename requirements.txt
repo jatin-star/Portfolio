@@ -1,0 +1,6 @@
+Django
+imutils
+python-dotenv
+pandas
+requests
+requests-oauthlib
