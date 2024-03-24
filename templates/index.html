@@ -9,9 +9,9 @@
     <meta name="author" content="Devcrud">
     <title>Meyawo Landing page | Free Bootstrap 4.3.x landing page</title>
 
-    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/meyawo.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'new/background.a0a93d39.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'project_css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/meyawo.css' %}">
+    <link rel="stylesheet" href="{% static 'new/background.a0a93d39.css' %}">
+    <link rel="stylesheet" href="{% static 'project_css/style.css' %}">
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
@@ -68,7 +68,7 @@
                         alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
                 </div>
                 <div class="about-caption">
-                    <h2 class="section-title mb-3">About Me</h2>
+                    <h1 class="section-title mb-3">About Me</h1>
                     <p>
                         I am Himanshu, a graduate student at the University of Florida,
                         pursuing a Master's in Business Analytics and Information Science.
@@ -196,7 +196,7 @@
     <section class="section" id="experince">
         <div class="container text-center">
             <div data-v-e499898c="" id="Background" class="container-fluid"><div data-v-e499898c="" class="row"><div data-v-e499898c="" class="col-lg-12">
-                <h3 data-v-e499898c="" class="text-center">Education &amp; Experience <div data-v-e499898c=""></div></h3><ul data-v-e499898c="" class="timeline"><li data-v-e499898c=""><div data-v-e499898c="" class="comego direction-l"><div data-v-e499898c="" class="flag-wrapper"><span data-v-e499898c="" class="hexa"></span><span data-v-e499898c="" class="flag text-info">University of South Florida</span>
+                <h1 data-v-e499898c="" class="text-center">Education &amp; Experience <div data-v-e499898c=""></div></h1><ul data-v-e499898c="" class="timeline"><li data-v-e499898c=""><div data-v-e499898c="" class="comego direction-l"><div data-v-e499898c="" class="flag-wrapper"><span data-v-e499898c="" class="hexa"></span><span data-v-e499898c="" class="flag text-info">University of South Florida</span>
                 <span data-v-e499898c="" class="time-wrapper"><span data-v-e499898c="" class="time bg-info">
                     August 2023 - May 2025</span>
             </span></div><div data-v-e499898c="" class="desc text-center font-italic">Master of Science (MS) in Business Analytics & Information Systems</div>
@@ -234,9 +234,10 @@
               <div class="col-md-12">
           <div class="services">
           <!-- Service Box 1 -->
-                  <div class="col-md-4 wp2 item animated fadeInUp">
+                  <div class="col-md-4 wp2 item0 animated fadeInUp">
                     <div class="icon">
-                      <i class="fa fa-camera"></i><!-- Icon -->
+                      <i class="fa fa-camera"></i>
+                        <img src="{% static 'images/Time_Series_Analysis.jpg' %}" alt="Service 1">
                     </div>
                     <h2>R Project - Time Series Forecasting</h2><!-- Title -->
                     <p>Conducted linear and multiple regression analysis in R to identify key factors influencing sales trends and demand
@@ -245,9 +246,10 @@
                         fluctuations</p>
                   </div>
           <!-- Service Box 2 -->
-                  <div class="col-md-4 wp2 item delay-05s animated fadeInUp">
+                  <div class="col-md-4 wp2 item1 delay-05s animated fadeInUp">
                     <div class="icon">
-                      <i class="fa fa-desktop"></i><!-- Icon -->
+                      <i class="fa fa-desktop"></i>
+                        <img src="{% static 'images/database_cricket.jpg' %}" alt="Service 2">
                     </div>
                     <h2>Database - Cricket</h2><!-- Title -->
                     <p>Developed a comprehensive cricket database with an Entity Relationship Diagram (ERD), optimizing its structure</p>
@@ -255,9 +257,10 @@
                         statistics and player performance</p>
                   </div>
           <!-- Service Box 3 -->
-                  <div class="col-md-4 wp2 item delay-1s animated fadeInUp">
+                  <div class="col-md-4 wp2 item2 delay-1s animated fadeInUp">
                     <div class="icon">
                       <i class="fa fa-cubes"></i><!-- Icon -->
+                        <img src="{% static 'images/churn_costumer.jpg' %}" alt="Service 3">
                     </div>
                     <h2>Churn Customers (Data Mining)</h2><!-- Title -->
                     <p>Facilitated requirements-gathering sessions to understand stakeholder needs and define project objectives effectively</p>
@@ -267,9 +270,10 @@
                         analyze churn trends, and concluded that less than $40K in education-level graduates have more utilization ratio</p>
                     <p>Utilized Qlik for interactive data visualization, creating dynamic dashboards to communicate insights and trends effectively</p>                   
                 </div>
-                  <div class="col-md-4 wp2 item delay-1.5s animated fadeInUp">
+                  <div class="col-md-4 wp2 item3 delay-1.5s animated fadeInUp">
                     <div class="icon">
                       <i class="fa fa-cubes"></i><!-- Icon -->
+                        <img src="{% static 'images/apache_airflow.jpg' %}" alt="Service 4">
                     </div>
                     <h2>ETL - Apache Airflow</h2><!-- Title -->
                     <p>Built ETL pipelines in Apache Airflow using operators, connecting Oracle databases securely. Configured DAGs for
@@ -288,16 +292,17 @@
             <p class="section-subtitle">How can you communicate?</p>
             <h6 class="section-title mb-5">Contact Me</h6>
             <!-- contact form -->
-            <form action="" class="contact-form col-md-10 col-lg-8 m-auto">
+            <form method="post" action="" class="contact-form col-md-10 col-lg-8 m-auto">
+                {% csrf_token %}
                 <div class="form-row">
                     <div class="form-group col-sm-6">
-                        <input type="text" size="50" class="form-control" placeholder="Your Name" required>
+                        <input name="Name" type="text" size="50" class="form-control" placeholder="Your Name" required>
                     </div>
                     <div class="form-group col-sm-6">
-                        <input type="email" class="form-control" placeholder="Enter Email" requried>
+                        <input name="email" type="email" class="form-control" placeholder="Enter Email" requried>
                     </div>
                     <div class="form-group col-sm-12">
-                        <textarea name="comment" id="comment" rows="6" class="form-control"
+                        <textarea name="message" id="comment" rows="6" class="form-control"
                             placeholder="Write Something"></textarea>
                     </div>
                     <div class="form-group col-sm-12 mt-3">
