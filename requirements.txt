@@ -4,3 +4,4 @@ python-dotenv
 pandas
 requests
 requests-oauthlib
+whitenoise==5.3.0
