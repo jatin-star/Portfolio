@@ -24,7 +24,7 @@ SECRET_KEY = 'django-insecure-tb(ux#qo=v%&(mn@^109z0&75!ibhzuyp*34zuigxq^-@_m4k$
 load_dotenv(BASE_DIR / '.env')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['.vercel.app', '127.0.0.1', '.onrender.com']
 
