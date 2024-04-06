@@ -388,9 +388,7 @@ h1, .h1 {
   font-size: 2.5rem;
 }
 
-h2, .h2 {
-  font-size: 2rem;
-}
+
 
 h3, .h3 {
   font-size: 1.75rem;
@@ -634,8 +632,8 @@ pre code {
 .col-xl-auto {
   position: relative;
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 25px;
+  padding-left: 25px;
 }
 
 .col {
@@ -10774,10 +10772,6 @@ button.bg-dark:focus {
 
 .font-weight-bolder {
   font-weight: bolder !important;
-}
-
-.font-italic {
-  font-style: italic !important;
 }
 
 .text-white {
